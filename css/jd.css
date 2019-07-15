@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+i,
+em {
+  font-style: normal;
+}
+.clearfix::after {
+  content: '.';
+  clear: both;
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+/*设置页面宽度*/
+.view {
+  /*合适头部开始部分*/
+  /*这是导航栏开始部分*/
+  /*这是掌上秒杀开始部分*/
+  /*这是狂撒亿万神券开始部分*/
+  /*这是手机专享开始部分*/
+  /*这是广告开始部分*/
+  /*这是特色超市开始部分*/
+  /*这是主题街开始部分*/
+  /*这是品牌推荐开始部分*/
+  /*这是猜你喜欢开始部分*/
+  /*这是脚底开始部分*/
+  /*这是脚底工具栏开始部分*/
+}
+.view .top_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  height: 40px;
+  background-color: #e00000;
+  width: 100%;
+}
+.view .top_bar .logo {
+  display: flex;
+  padding: 10px 7px;
+}
+.view .top_bar .logo h1 {
+  display: flex;
+}
+.view .top_bar .logo h1 a {
+  width: 56px;
+  height: 20px;
+  font-size: 0;
+  background-color: yellow;
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-size: 200px 200px;
+  background-position: 0 -109px;
+}
+.view .top_bar .search {
+  flex: 1;
+  padding: 5px 0;
+  position: relative;
+}
+.view .top_bar .search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-indent: 30px;
+}
+.view .top_bar .search::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 18px;
+  height: 19px;
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-size: 200px 200px;
+  background-position: -60px -110px;
+}
+.view .top_bar > a {
+  width: 50px;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+}
+.view nav {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 10px solid pink;
+}
+.view nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  font-size: 14px;
+  color: #666666;
+  margin: 5px 0;
+}
+.view nav a img {
+  width: 46%;
+}
+.view .killprice .killprice_title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+.view .killprice .killprice_title .title_lf {
+  display: flex;
+}
+.view .killprice .killprice_title .title_lf > span {
+  width: 17px;
+  height: 21px;
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-size: 200px 200px;
+  background-position: -84px -110px;
+}
+.view .killprice .killprice_title .title_lf em {
+  color: #c91523;
+  margin-left: 12px;
+  margin-right: 16px;
+}
+.view .killprice .killprice_title .title_lf .title_lf_time {
+  display: flex;
+}
+.view .killprice .killprice_title .title_lf .title_lf_time span {
+  color: #fff;
+  font-size: 14px;
+  background-color: #3f3f3f;
+  margin-top: 1px;
+  margin-right: 3px;
+  padding: 0 2px;
+}
+.view .killprice .killprice_title .title_lf .title_lf_time span:nth-child(3n) {
+  background-color: #fff;
+  color: #3f3f3f;
+}
+.view .killprice .killprice_title > a {
+  font-size: 14px;
+}
+.view .killprice .killprice_content {
+  display: flex;
+}
+.view .killprice .killprice_content a {
+  position: relative;
+  flex: 1;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.view .killprice .killprice_content a img {
+  width: 90%;
+}
+.view .killprice .killprice_content a span {
+  color: #c91523;
+}
+.view .killprice .killprice_content a del {
+  color: #666;
+}
+.view .killprice .killprice_content a em {
+  position: absolute;
+  top: 35%;
+  right: 17%;
+  width: 46px;
+  height: 27px;
+  background-color: #ffb200;
+  color: #fff;
+  line-height: 27px;
+  border-radius: 50%;
+}
+.view .coupon {
+  display: flex;
+  background: url('../uploads/banner_bg.jpg') no-repeat;
+  background-size: 100%;
+  padding-top: 15%;
+  padding-bottom: 1%;
+}
+.view .coupon .coupon_hot {
+  flex: 1;
+  padding: 0 1%;
+}
+.view .coupon .coupon_theme {
+  flex: 1;
+  padding: 0 1%;
+}
+.view .major .major_up {
+  display: flex;
+}
+.view .major .major_up > a {
+  flex: 1;
+}
+.view .major .major_down {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .major .major_down > a {
+  width: 50%;
+}
+.view .advert_1,
+.view .advert_2,
+.view .advert_3,
+.view .advert_4 {
+  padding: 0 5px;
+}
+.view .market {
+  margin: 10px 0;
+}
+.view .market .market_title {
+  padding-left: 5px;
+}
+.view .market .market_title h4 {
+  font-size: 16px;
+  color: #c91523;
+}
+.view .market .market_content {
+  display: flex;
+}
+.view .market .market_content_lf {
+  flex: 1;
+}
+.view .market .market_content_rg {
+  flex: 1;
+}
+.view .theme_street {
+  margin: 10px 0;
+}
+.view .theme_street .theme_street_title {
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.view .theme_street .theme_street_title h4 {
+  font-size: 16px;
+  color: #c91523;
+}
+.view .theme_street .theme_street_content .street_content_top {
+  display: flex;
+}
+.view .theme_street .theme_street_content .street_content_top .content_top_lf {
+  flex: 1;
+}
+.view .theme_street .theme_street_content .street_content_top .content_top_rg {
+  flex: 1;
+}
+.view .theme_street .theme_street_content .street_content_top .content_top_rg .top_rg_bear {
+  height: 50%;
+}
+.view .theme_street .theme_street_content .street_content_top .content_top_rg .top_rg_other {
+  height: 50%;
+  display: flex;
+}
+.view .theme_street .theme_street_content .street_content_top .content_top_rg .top_rg_other > a {
+  flex: 1;
+}
+.view .theme_street .theme_street_content .street_content_down {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .theme_street .theme_street_content .street_content_down a {
+  width: 25%;
+}
+.view .brand {
+  margin: 10px 0;
+}
+.view .brand .brand_title {
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.view .brand .brand_title h4 {
+  font-size: 16px;
+  color: #c91523;
+}
+.view .brand .brand_content {
+  display: flex;
+}
+.view .guess {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.view .guess .guess_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.view .guess .guess_title h4 {
+  font-size: 16px;
+  color: #c91523;
+}
+.view .guess .guess_title .guess_title_login {
+  color: #c91523;
+  display: flex;
+  font-size: 13px;
+}
+.view .guess .guess_title .guess_title_login img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.view .guess .guess_content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view .guess .guess_content ul li {
+  width: 50%;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+.view .guess .guess_content ul li .item_title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.view .guess .guess_content ul li .item_title span {
+  font-size: 16px;
+  color: #c91523;
+}
+.view .guess .guess_content ul li .item_title > a {
+  border: 1px solid #ccc;
+  color: #666;
+}
+.view .guess .guess_content ul li p {
+  font-size: 14px;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+}
+.view .footer {
+  font-size: 14px;
+  color: #666;
+  background-color: #f3f6f8;
+}
+.view .footer .footer_more {
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.view .footer .footer_nav {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.view .footer .footer_nav a {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #000;
+}
+.view .footer .footer_nav a:nth-child(4) {
+  border-right: 0;
+}
+.view .footer .footer_format {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.view .footer .footer_format > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.view .footer .footer_format > a em {
+  width: 34px;
+  height: 34px;
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-position: -120px -70px;
+  background-size: 200px 200px;
+  margin-bottom: 5px;
+}
+.view .footer .footer_format > a .touch {
+  background-position: -40px -70px;
+}
+.view .footer .footer_format > a .pc {
+  background-position: -80px -70px;
+}
+.view .footer .footer_copy {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 85px;
+}
+.view .footer_bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}

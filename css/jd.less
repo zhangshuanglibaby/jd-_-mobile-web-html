@@ -1,0 +1,409 @@
+// 先引入base文档
+@import './base.less';
+
+@fontcol :#c91523;
+
+
+
+
+/*设置页面宽度*/
+.view {
+    /*合适头部开始部分*/
+    .top_bar {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        height: 40px;
+        background-color: #e00000; 
+        width: 100%;   
+        .logo {
+            display: flex;           
+            padding: 10px 7px;
+            h1 {
+                display: flex;
+                a {
+                    width: 56px;
+                    height: 40px/2;
+                    font-size: 0;
+                    background-color: yellow;
+                    background: url('../images/jd-sprites.png') no-repeat;
+                    background-size: 200px 200px;
+                    background-position: 0 -218px/2;                 
+                }
+            }
+        }
+        .search {
+            flex: 1;
+            padding: 5px 0;
+            position: relative;
+            input {
+            width: 100%;
+            height: 100%; 
+            border-radius: 20px; 
+            text-indent: 30px;                    
+            }
+            &::after {
+                content: '';
+                display:block;
+                position: absolute;
+                top: 12px;
+                left: 10px;
+                width: 36px/2;
+                height: 38px/2;
+                background: url('../images/jd-sprites.png') no-repeat;
+                background-size: 200px 200px;
+                background-position: -120px/2 -220px/2;
+            }
+        }
+        >a {
+            width: 50px;
+            height: 40px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+        }
+    }
+
+
+    /*这是导航栏开始部分*/
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 10px solid pink;
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            font-size: 14px;
+            color: #666666;
+            margin: 5px 0;
+            img {
+                width: 46%;
+            }
+        }
+    }
+
+
+    /*这是掌上秒杀开始部分*/
+    .killprice {
+        .killprice_title {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 20px;
+            .title_lf {
+                display: flex;
+                >span {
+                    width: 34px/2;
+                    height: 42px/2;
+                    background: url('../images/jd-sprites.png') no-repeat;
+                    background-size: 200px 200px;
+                    background-position: -168px/2 -220px/2;
+                }
+                em {
+                    color: @fontcol;
+                    margin-left: 12px;
+                    margin-right: 16px;
+                }
+                .title_lf_time {
+                    display: flex;
+                    span {
+                        color: #fff;
+                        font-size: 14px;
+                        background-color: #3f3f3f;
+                        margin-top: 1px;
+                        margin-right: 3px;
+                        padding: 0 2px;
+                        &:nth-child(3n) {
+                            background-color: #fff;
+                            color: #3f3f3f;
+                        }
+                    }
+                }
+            }
+            >a {
+                font-size: 14px;
+            }
+        }
+        .killprice_content {
+            display: flex;
+            a {   
+                position: relative;         
+                flex: 1;
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                img {
+                    width: 90%;
+                }
+                span {
+                    color: @fontcol;
+                }
+                del {
+                    color: #666;
+                }
+                em {
+                    position: absolute;
+                    top: 35%;
+                    right: 17%;
+                    width: 46px;
+                    height: 27px;
+                    background-color: #ffb200;
+                    color: #fff;
+                    line-height: 27px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+
+    /*这是狂撒亿万神券开始部分*/
+    .coupon {
+            display: flex;
+            background:url('../uploads/banner_bg.jpg') no-repeat;
+            background-size: 100%;
+            padding-top: 15%;
+            padding-bottom: 1%;  
+        .coupon_hot {
+            flex:1;
+            padding: 0 1%;
+        }
+        .coupon_theme {
+            flex: 1;
+            padding: 0 1%;
+        }
+    }
+
+
+    /*这是手机专享开始部分*/
+    .major {
+        .major_up {
+            display: flex;
+            >a {
+                flex: 1;
+            }
+        }
+        .major_down {
+            display: flex;
+            flex-wrap: wrap;
+            >a {
+                width: 50%;
+            }
+        }
+    }  
+    
+    /*这是广告开始部分*/
+    .advert_1,
+    .advert_2,
+    .advert_3,
+    .advert_4 {
+        padding: 0 5px;
+    }
+
+
+    /*这是特色超市开始部分*/
+    .market {
+        margin:10px 0;
+        .market_title{
+            padding-left: 5px;
+            h4 {
+                font-size: 16px;
+                color: @fontcol;
+            }
+        }
+        .market_content {
+            display: flex;
+        }
+        .market_content_lf {
+            flex: 1;
+        }
+        .market_content_rg {
+            flex: 1;
+        }
+    }
+
+
+    /*这是主题街开始部分*/
+    .theme_street {
+        margin: 10px 0;
+        .theme_street_title {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            h4 {
+                font-size: 16px;
+                color: @fontcol;
+            }
+        }
+        .theme_street_content {
+            .street_content_top {
+                display: flex;
+                .content_top_lf {
+                    flex: 1;
+                }
+                .content_top_rg {
+                    flex: 1;
+                    .top_rg_bear {
+                        height: 50%;
+                    }
+                    .top_rg_other {
+                        height: 50%;
+                        display: flex;
+                        >a {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+            .street_content_down {
+                display: flex;
+                flex-wrap: wrap;
+                a {
+                    width: 25%;
+                }
+            }
+        }
+    }
+
+
+    /*这是品牌推荐开始部分*/
+    .brand {
+        margin: 10px 0;
+        .brand_title {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            h4 {
+                font-size: 16px;
+                color: @fontcol;
+            }
+        }
+        .brand_content {
+            display: flex;
+        }
+    }
+
+
+    /*这是猜你喜欢开始部分*/
+    .guess {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        .guess_title {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+            h4 {
+                font-size: 16px;
+                color: @fontcol;
+            }
+            .guess_title_login {
+                color: @fontcol;
+                display: flex;
+                font-size: 13px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .guess_content {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 50%;
+                    padding: 0 10px;
+                    margin-top: 15px;
+                    .item_title {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 13px;
+                        span {
+                            font-size: 16px;
+                            color: @fontcol;
+                        }
+                        >a {
+                            border: 1px solid #ccc;
+                            color: #666;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        height: 40px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #cccccc;
+                    }
+                }
+            }
+        }
+    }
+
+    /*这是脚底开始部分*/
+    .footer {
+        font-size: 14px;
+        color: #666;
+        background-color: #f3f6f8;
+        .footer_more {
+            padding: 10px 0;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .footer_nav {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            a {
+                flex: 1;
+                text-align: center;
+                border-right: 1px solid #000;
+                &:nth-child(4) {
+                    border-right: 0;
+                }
+            }
+        }
+        .footer_format {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            >a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                em {
+                    width: 34px;
+                    height: 34px;
+                    background: url('../images/jd-sprites.png') no-repeat;
+                    background-position: -240px/2 -140px/2;
+                    background-size: 200px 200px;
+                    margin-bottom: 5px;
+                }
+                .touch {
+                    background-position: -80px/2 -140px/2;
+                }
+                .pc {
+                    background-position: -160px/2 -140px/2;
+                }
+            }
+        }
+        .footer_copy {
+            text-align: center;
+            padding-top: 25px;
+            padding-bottom: 85px;
+        }
+    }
+
+
+    /*这是脚底工具栏开始部分*/
+    .footer_bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+    }
+}
